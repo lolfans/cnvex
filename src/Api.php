@@ -780,7 +780,7 @@ class Api extends Http
 
 
     /**
-     * 白条支付
+     * 白条支付---
      * @param $agentUserCode
      * @param $payerUserId
      * @param $merchOrderNo
