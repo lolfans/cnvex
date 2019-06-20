@@ -791,10 +791,11 @@ class Api extends Http
      * @param $notifyUrl
      * @return string
      */
-    public function baiTiaoPay($payerUserId,$merchOrderNo,$payerAccountNo,$amount,$macAddress,$returnUrl,$notifyUrl)
+    public function baiTiaoPay($agentUserCode,$payerUserId,$merchOrderNo,$payerAccountNo,$amount,$macAddress,$returnUrl,$notifyUrl)
     {
         return $this->post([
             'service'           => 'baiTiaoPay',
+            'agentUserCode'     => $agentUserCode,
             'payerUserId'       => $payerUserId,
             'merchOrderNo'      => $merchOrderNo,
             'payerAccountNo'    => $payerAccountNo,
@@ -826,12 +827,13 @@ class Api extends Http
      * @param $details
      * @return string
      */
-    public function tradeProfitForBaiTiao($origMerchOrdeNo,$tradeProfitInfoList,$orderTitle,$goodsCount,$receivingAddress,$inquiryTime,$quoteTime,$orderTime,$deliveryTime,$payTime,$carBrandName,$carSeriesName,$carModelName,$details)
+    public function tradeProfitForBaiTiao($origMerchOrdeNo,$tradeProfitInfoList,$agentUserCode,$orderTitle,$goodsCount,$receivingAddress,$inquiryTime,$quoteTime,$orderTime,$deliveryTime,$payTime,$carBrandName,$carSeriesName,$carModelName,$details)
     {
         return $this->post([
             'service'               => 'tradeProfitForBaiTiao',
             'origMerchOrdeNo'       => $origMerchOrdeNo,
             'tradeProfitInfoList'   => $tradeProfitInfoList,
+            'agentUserCode'         => $agentUserCode,
             'orderTitle'            => $orderTitle,
             'goodsCount'            => $goodsCount,
             'receivingAddress'      => $receivingAddress,
@@ -870,13 +872,14 @@ class Api extends Http
      */
 
 
-    public function tradeRefundForBaiTiao($origMerchOrdeNo,$refundAmount,$refundReason,$orderTitle,$goodsCount,$receivingAddress,$inquiryTime,$quoteTime,$orderTime,$deliveryTime,$payTime,$carBrandName,$carSeriesName,$carModelName,$details,$notifyUrl)
+    public function tradeRefundForBaiTiao($origMerchOrdeNo,$refundAmount,$refundReason,$agentUserCode,$orderTitle,$goodsCount,$receivingAddress,$inquiryTime,$quoteTime,$orderTime,$deliveryTime,$payTime,$carBrandName,$carSeriesName,$carModelName,$details,$notifyUrl)
     {
         return $this->post([
             'service'               => 'tradeRefundForBaiTiao',
             'origMerchOrdeNo'       => $origMerchOrdeNo,
             'refundAmount'          => $refundAmount,
             'refundReason'          => $refundReason,
+            'agentUserCode'         => $agentUserCode,
             'orderTitle'            => $orderTitle,
             'goodsCount'            => $goodsCount,
             'receivingAddress'      => $receivingAddress,
