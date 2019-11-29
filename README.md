@@ -1,6 +1,7 @@
 # The [e.cnvex.cn](http://bxapi.cnvex.cn/apiService/intoSchemeService.html) API PHP SDK
-
-#对于 需要新对接的 接口不必集成到该包里面API.php里面，否则每加一个接口，就得发布一次包，而有些项目根本又不需要这些个接口，因此直接调用该包的Http.php 文件中的post()方法就行了，可以很灵活。因为本质上需要的其实就是加密解密而已
+-------------------------------
+#FORK之后的补充建议： 需要新对接的 接口不必集成到该包里面API.php里面，否则每加一个接口，就得发布一次包，而有些项目根本又不需要这些个接口，因此直接调用该包的Http.php 文件中的post()方法就行了，可以很灵活。因为本质上需要的其实就是加密解密而已
+-------------------------------
 ## 简介
 [企账通2.0](http://www.cnvex.cn/ProductQzt.html) 是重庆汽摩交易所其他企业级交易计算工具，本项目是PHP版本接口实现，官方接口文档参考[这里](http://bxapi.cnvex.cn/apiService/intoSchemeService.html)。目前支持以下功能：
 - 微信、支付宝原生APP支付，二维码支付
